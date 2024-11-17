@@ -27,7 +27,7 @@ jobs:
          run: jf npm install
            
        - name: Run build
-         run: npm build
+         run: npm run build
          
        - name: Publish
          run: jf npm publish
