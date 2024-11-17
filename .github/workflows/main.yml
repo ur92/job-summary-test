@@ -17,6 +17,8 @@ jobs:
            
        - name: Setup Node npm
          uses: actions/setup-node@v3
+         with:
+           node-version: '20'
            
        - name: Set CLI Config
          run: jf npm-config --global=true --repo-resolve=my-repo-npm --repo-deploy=my-repo-npm
