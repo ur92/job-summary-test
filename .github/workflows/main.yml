@@ -6,40 +6,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup JFrog CLI
-        uses: jfrog/setup-jfrog-cli@v4
-        env:
-          JF_URL: "https://binid.jfrog.io"
-          JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
-
-      - name: Setup Node npm
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
-
-      - name: Set CLI Config
-        run: jf npm-config --global=true --repo-resolve=my-repo-npm --repo-deploy=my-repo-npm
-
-      - name: Install Deps
-        run: jf npm install
-
-      - name: Run build
-        run: npm run build
-
-      - name: Publish
-        run: jf npm publish
-
-      - name: Publish Build info With JFrog CLI
-        run: |
-          # Collect environment variables for the build
-          jf rt build-collect-env
-          # Collect VCS details from git and add them to the build
-          jf rt build-add-git
-          # Publish build info
-          jf rt build-publish
-
       - name: Adding link to JPD
         run: echo '![GitHub Logo](https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg)' >> $GITHUB_STEP_SUMMARY
