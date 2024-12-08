@@ -7,4 +7,4 @@ jobs:
 
     steps:
       - name: Adding link to JPD
-        run: echo '![GitHub Logo](https://drive.google.com/file/d/1uJNCIwPKVgPEokrpS-vNjb7BoFQF_BMA/view?usp=share_link)' >> $GITHUB_STEP_SUMMARY
+        run: echo '![GitHub Logo](https://trialyho3i6.jfrog.io/artifactory/my-repo-npm/test1.jpg)' >> $GITHUB_STEP_SUMMARY
