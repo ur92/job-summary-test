@@ -5,8 +5,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-
-
     steps:
       - name: Adding link to JPD
         run: echo '![GitHub Logo](https://my-repo-1987.s3.us-east-2.amazonaws.com/test1.jpg)' >> $GITHUB_STEP_SUMMARY
