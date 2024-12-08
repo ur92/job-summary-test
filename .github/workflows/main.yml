@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Adding link to JPD
+
         run: echo '![GitHub Logo](https://webhook-test.com/de5b523bde46b647017f7621e568cf64?q)' >> $GITHUB_STEP_SUMMARY
 
 #      - name: failing
